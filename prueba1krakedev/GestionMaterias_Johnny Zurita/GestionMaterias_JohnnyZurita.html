@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Materias</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='GestionMaterias.css'>
+    <script src='GestionMaterias_JohnnyZurita.js'></script>
+    <script src='utilitarios.js'></script>
+    <script src='utilitariosCadenas.js'></script>
+</head>
+<div class="logoEscuela">
+    <img src="./imagenes/logoKrakeDev.png" width="20%" />
+</div>
+<body onload="refrescarMaterias();">
+
+    <div id="divBusquedasMaterias">
+        <div class="principal">
+            <div class="area">
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        CODIGO A BUSCAR
+                    </div>
+                    <div>
+            <input type="text" class="cajaTexto" id="txtBuscar" />
+            <div class="error" id="lblErrorBuscarMateria"></div>
+        </div>
+        <div class="contenedorBoton">
+            <input type="button" value="BUSCAR" class="estiloBoton" onclick="buscarMateria('txtBuscar');"/>
+        
+        </div>
+    </div>
+    <div id="divMaterias">
+        <div class="ingresoDatos">
+            <div class="tituloCampo">
+                NOMBRE DE MATERIA
+            </div>
+            <div>
+            <input type="text" class="cajaTexto" id="txtNombreMateria" />
+            <div class="error" id="lblErrorNombreMateria"></div>
+        </div>
+        <div class="ingresoDatos">
+            <div class="tituloCampo">
+                CODIGO
+            </div>
+            <div>
+            <input type="text" class="cajaTexto" id="txtCodigo" />
+            <div class="error" id="lblErrorCodigo"></div>
+        </div>
+         <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        DESCRIPCION
+                    </div>
+                    <div>
+            <input type="text" class="cajaTexto" id="txtDescripcion" />
+            <div class="error" id="lblErrorDescripcion"></div>
+        </div>
+
+        <div class="contenedorBoton">
+            <input type="button" value="GUARDAR" class="estiloBoton" onclick="agregarMateria();"/>
+            <input type="button" value="REFRESCAR" class="estiloBoton" onclick="refrescarMaterias();" />
+        </div>
+        <div id="tablaMaterias" class="areaTabla">
+
+        </div>
+    </div>
+</body>
+</html>
